@@ -5,25 +5,24 @@
 namespace s21 {
 
 class Layer {
- public:
-  Layer(int layerNumber, unsigned long neuronsQuantity,
-        unsigned long previousLayerNeuronsQuantity);
-  ~Layer();
+public:
+    Layer(int layerNumber, unsigned long neuronsQuantity, unsigned long previousLayerNeuronsQuantity);
+    ~Layer();
 
-  std::vector<Neuron*>& getNeuron();
+    std::vector<Neuron*>& getNeuron();
 
-  int getNeuronsQuantity();
-  int getLayerNumber();
-  void calculateOutput(Layer* layer);
-  void calculateLastLayerError(int expectedResult);
-  void calculateError(Layer* previousLayer);
-  void calculateDelta();
-  void adjustWeight(Layer* layer, double learningRate);
+    int getNeuronsQuantity();
+    int getLayerNumber();
+    void calculateOutput(Layer* layer);
+    void calculateLastLayerError(int expectedResult);
+    void calculateError(Layer* previousLayer);
+    void calculateDelta();
+    void adjustWeight(Layer* layer, double learningRate);
 
- private:
-  std::vector<Neuron*> m_Neurons;
-  int m_layerNumber;
-  int m_neuronsQuantity;
+private:
+    std::vector<Neuron*> m_Neurons;
+    int m_layerNumber;
+    int m_neuronsQuantity;
 };
 }  // namespace s21
 #endif  //  SRC_MODEL_LAYER_H_

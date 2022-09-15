@@ -1,16 +1,17 @@
 #ifndef SRC_MODEL_NEURALTRANSFORMATIONS_H_
 #define SRC_MODEL_NEURALTRANSFORMATIONS_H_
 
-#include "interfaceNet.h"
+#include <array>
+
 #include "../common.h"
 #include "cvsReader.h"
 #include "graphNet.h"
+#include "interfaceNet.h"
 #include "matrixNet.h"
-#include <array>
 
 namespace s21 {
 class NeuralTransformations {
- private:
+private:
     int m_layersCount;
     double m_accuracy;
     double m_precision;
@@ -22,7 +23,7 @@ class NeuralTransformations {
     std::string m_pathTestFile;
     std::string m_pathTrainFile;
 
- public:
+public:
     NeuralTransformations(ModelType type, int layersCount, std::string pathTest, std::string pathTrain);
     NeuralTransformations(ModelType type, int layersCount);
     std::array<double, 6> fileTest(double sampleSize);

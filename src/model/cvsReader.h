@@ -8,15 +8,15 @@
 
 namespace s21 {
 class CvsReader {
- private:
-  std::vector<std::vector<double> > _data;
-  void setData(std::vector<std::vector<double> > data) { _data = data; }
+private:
+    std::vector<std::vector<double> > _data;
+    void setData(std::vector<std::vector<double> > data) { _data = data; }
 
- public:
-  CvsReader() {}
-  void readFile(std::string path);
-  std::vector<std::vector<double> > getVector() { return _data; }
-  unsigned long getCountString() { return _data.size(); }
+public:
+    CvsReader() {}
+    void readFile(std::string path);
+    std::vector<std::vector<double> > getVector() { return _data; }
+    unsigned long getCountString() { return _data.size(); }
 };
 }  // namespace s21
 

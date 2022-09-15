@@ -1,6 +1,8 @@
 #include <gtest/gtest.h>
-#include "../controller/controller.h"
+
 #include <array>
+
+#include "../controller/controller.h"
 
 using namespace s21;
 
@@ -63,6 +65,6 @@ TEST(mlpTests, test9) {
 }
 
 int main(int argc, char **argv) {
-  ::testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
 }
